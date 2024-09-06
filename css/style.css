@@ -14,6 +14,8 @@ header {
 nav {
     background-color: #333;
     padding: 10px 0;
+    display: inline-block;
+    width: 80%;
 }
 
 nav ul {
@@ -23,10 +25,11 @@ nav ul {
     text-align: center;
 }
 
-nav ul li {
+/* Comentar o estilo existente para li */
+/* nav ul li {
     display: inline;
     margin: 0 15px;
-}
+} */
 
 nav ul li a {
     color: white;
@@ -47,18 +50,29 @@ footer {
     padding: 10px 0;
 }
 
-li {
-    display: inline-block;
-    width: auto;
+/* Seletor descendente para estilizar a imagem na navegação */
+nav img {
+    width: 10%;
 }
 
-h1 {
-    text-align: center;
-    font-family: 'Georgia', serif;
-    color: #333;
+/* Estilizar a classe grid para usar duas colunas */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 40%);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
-p {
-    line-height: 1.6;
-    margin: 10px 0;
+/* Seletor descendente para estilizar apenas as imagens na classe grid */
+.grid img {
+    width: 100%;
+}
+
+/* Estilizar a classe flex */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 20px;
 }
