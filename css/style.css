@@ -1,78 +1,96 @@
-body {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #f4f4f4;
-    padding: 20px;
-    text-align: center;
-}
-
-nav {
+/* Estilo inicial para o link "Ir para o conteúdo principal" */
+.skip-link {
+    position: absolute;
+    top: -40px; /* Posiciona o link fora da área visível */
+    left: 0;
+    background-color: #000;
+    color: #fff;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: top 0.3s ease;
+    z-index: 100; /* Garante que o link ficará acima de outros elementos */
+  }
+  
+  /* Estilo para quando o link "Ir para o conteúdo principal" estiver em foco */
+  .skip-link:focus {
+    top: 0; /* Move o link para a área visível */
+  }
+  
+  /* Estilizando a barra de navegação com Flexbox */
+  .navbar ul {
+    display: flex;
+    justify-content: space-around;
     background-color: #333;
-    padding: 10px 0;
-    display: inline-block;
-    width: 80%;
-}
-
-nav ul {
+    padding: 10px;
+  }
+  
+  .navbar ul li {
     list-style: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-/* Comentar o estilo existente para li */
-/* nav ul li {
-    display: inline;
-    margin: 0 15px;
-} */
-
-nav ul li a {
+  }
+  
+  .navbar ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
-}
-
-main {
-    background-color: #fafafa;
-    font-size: 14px;
-    padding: 20px;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-}
-
-/* Seletor descendente para estilizar a imagem na navegação */
-nav img {
-    width: 10%;
-}
-
-/* Estilizar a classe grid para usar duas colunas */
-.grid {
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .navbar ul li a:hover {
+    background-color: #555;
+  }
+  
+  /* Estilizando as imagens */
+  img {
+    border: 2px solid #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    margin: auto;
+    display: block;
+  }
+  
+  img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Usando Grid */
+  .grid {
     display: grid;
-    grid-template-columns: repeat(2, 40%);
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Seletor descendente para estilizar apenas as imagens na classe grid */
-.grid img {
-    width: 100%;
-}
-
-/* Estilizar a classe flex */
-.flex {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  /* Usando Flexbox */
+  .flex-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    row-gap: 20px;
-}
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  /* Estilizando com nth-child */
+  .grid img:nth-child(odd) {
+    border-radius: 20px;
+  }
+  
+  .grid img:nth-child(even) {
+    border-radius: 5px;
+  }
+ /* Estilo para o link "Voltar ao topo" */
+.back-to-top {
+    display: block;
+    margin: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .back-to-top:hover {
+    background-color: #ddd;
+    transform: scale(1.1); /* Aumenta o tamanho do botão ao passar o mouse */
+  }
